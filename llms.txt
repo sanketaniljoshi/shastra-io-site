@@ -2,7 +2,7 @@
 
         > AI technology company (Bangalore + Kent) helping brands build, market, and scale using AI across strategy, creative, and product.
 
-        Shastra AI is a unit of Hridtech Private Limited, a Bengaluru-based venture builder. Founded by Sanket Joshi.
+        Shastra AI is a unit of Hridtech Private Limited, a Bengaluru-based venture builder. Founded by Sanket Anil Joshi.
 
         ## What we do
         - AI Build: websites, apps, internal tools, automations, AI agents
