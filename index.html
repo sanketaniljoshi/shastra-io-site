@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shastra AI — AI technology company for modern brands</title>
+<meta name="description" content="Shastra AI is an AI technology company building agents, automations, content pipelines and digital products for brands across India, the UAE, the UK and the US. Brand & strategy, performance marketing, creative & content, AI build. Offices in Bangalore and Kent.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://shastra.io/">
+<meta property="og:title" content="Shastra AI — AI technology company for modern brands">
+<meta property="og:description" content="Shastra AI is an AI technology company building agents, automations, content pipelines and digital products for brands across India, the UAE, the UK and the US.">
+<meta property="og:url" content="https://shastra.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shastra AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shastra AI — AI technology company for modern brands">
+<meta name="twitter:description" content="AI technology company building agents, automations, content pipelines and digital products for brands across India, the UAE, the UK and the US.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Shastra AI",
+  "url": "https://shastra.io",
+  "description": "AI technology company building agents, automations, content pipelines and digital products for brands across India, the UAE, the UK and the US.",
+  "email": "hello@shastra.io",
+  "sameAs": ["https://linkedin.com/in/sanketjoshi"],
+  "founder": { "@type": "Person", "name": "Sanket Joshi" },
+  "parentOrganization": { "@type": "Organization", "name": "Hridtech Private Limited", "url": "https://hridtech.com" },
+  "address": [
+    { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+    { "@type": "PostalAddress", "addressLocality": "Kent", "addressCountry": "GB" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1726;
+    --cream: #F7F3EA;
+    --amber: #B8862F;
+    --grey: #5A6072;
+    --light-grey: #E2DED2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+
+  /* ── Header ────────────────────────────────────────────── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247, 243, 234, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--light-grey);
+  }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .logo svg { height: 44px; width: auto; display: block; }
+  nav { display: flex; gap: 32px; align-items: center; }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--amber); }
+  nav a.cta {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 10px 18px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  nav a.cta:hover { background: #1a253c; color: var(--cream); }
+  .mobile-only { display: none; }
+  @media (max-width: 720px) {
+    nav .desktop-only { display: none; }
+    nav .mobile-only { display: inline-block; }
+  }
+
+  /* ── Hero ──────────────────────────────────────────────── */
+  .hero { padding: 120px 0 140px; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(44px, 6.4vw, 84px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    max-width: 920px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--amber);
+  }
+  .hero .sub {
+    font-size: clamp(17px, 1.8vw, 21px);
+    line-height: 1.55;
+    color: var(--grey);
+    max-width: 620px;
+    margin-bottom: 44px;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 16px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.2s;
+  }
+  .hero-cta:hover { background: #1a253c; }
+  .hero-cta svg { width: 16px; height: 16px; }
+  .geo-strip {
+    margin-top: 64px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+  .geo-strip .dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--amber);
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  /* ── Section base ──────────────────────────────────────── */
+  section { padding: 110px 0; border-top: 1px solid var(--light-grey); }
+  .section-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(34px, 4.4vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 760px;
+  }
+  .section-title em { font-style: italic; color: var(--amber); }
+  .section-lead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--grey);
+    max-width: 640px;
+    margin-bottom: 64px;
+  }
+
+  /* ── Services ──────────────────────────────────────────── */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px 64px;
+  }
+  @media (max-width: 720px) {
+    .services { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .service .service-num {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--amber);
+    margin-bottom: 14px;
+  }
+  .service h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .service p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--grey);
+  }
+
+  /* ── Who we work with ──────────────────────────────────── */
+  .audiences {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 720px) {
+    .audiences { grid-template-columns: 1fr; gap: 20px; }
+  }
+  .audience {
+    border: 1px solid var(--light-grey);
+    background: rgba(255, 255, 255, 0.4);
+    padding: 32px;
+    border-radius: 6px;
+  }
+  .audience h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .audience p {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  /* ── Method ────────────────────────────────────────────── */
+  .method-steps {
+    position: relative;
+    padding-left: 36px;
+    max-width: 760px;
+  }
+  .method-steps::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 18px;
+    bottom: 18px;
+    border-left: 1.5px dashed var(--amber);
+  }
+  .method-step {
+    position: relative;
+    padding: 0 0 56px 0;
+  }
+  .method-step:last-child { padding-bottom: 0; }
+  .method-step::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 10px;
+    width: 13px;
+    height: 13px;
+    background: var(--amber);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px var(--cream);
+  }
+  .method-step .step-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .method-step h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 14px;
+    line-height: 1.15;
+  }
+  .method-step p {
+    font-size: 16px;
+    color: var(--grey);
+    line-height: 1.65;
+    max-width: 580px;
+  }
+
+  /* ── Founder ───────────────────────────────────────────── */
+  .founder {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 720px) {
+    .founder { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .founder-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 6px;
+    background: var(--ink);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 64px;
+    letter-spacing: -2px;
+  }
+  .founder-text h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .founder-text .role {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 22px;
+  }
+  .founder-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--grey);
+    margin-bottom: 14px;
+    max-width: 620px;
+  }
+  .founder-text a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--amber);
+    padding-bottom: 2px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .founder-text a:hover { color: var(--amber); }
+
+  /* ── Contact ───────────────────────────────────────────── */
+  .contact {
+    background: var(--ink);
+    color: var(--cream);
+    border-top: none;
+    padding: 140px 0;
+    text-align: center;
+  }
+  .contact .section-eyebrow { color: var(--amber); }
+  .contact h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5.2vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    color: var(--cream);
+  }
+  .contact h2 em { font-style: italic; color: var(--amber); }
+  .contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(247, 243, 234, 0.72);
+    max-width: 560px;
+    margin: 0 auto 44px;
+  }
+  .contact-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--amber);
+    color: var(--ink);
+    padding: 18px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.2s;
+  }
+  .contact-cta:hover { background: #d09e3d; }
+  .offices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 88px;
+    text-align: left;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 720px) {
+    .offices { grid-template-columns: 1fr; gap: 24px; margin-top: 64px; }
+  }
+  .office {
+    background: rgba(247, 243, 234, 0.04);
+    border: 1px solid rgba(184, 134, 47, 0.3);
+    padding: 28px 28px 26px;
+    border-radius: 6px;
+  }
+  .office-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .office-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+  .office-address {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(247, 243, 234, 0.7);
+    margin-bottom: 14px;
+  }
+  .office-phone {
+    font-size: 14px;
+    color: var(--cream);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 134, 47, 0.4);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .office-phone:hover { border-color: var(--amber); }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    color: rgba(247, 243, 234, 0.6);
+    padding: 40px 0;
+    font-size: 13px;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer a {
+    color: rgba(247, 243, 234, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--amber); }
+  footer .foot-links { display: flex; gap: 24px; }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="container">
+    <a href="#top" class="logo" aria-label="Shastra — home">
+      <svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="8" y1="14" x2="312" y2="14" stroke="#B8862F" stroke-width="1" stroke-dasharray="2,4"/>
+        <circle cx="8" cy="14" r="3.5" fill="#B8862F"/>
+        <circle cx="84" cy="14" r="2.2" fill="#B8862F"/>
+        <circle cx="160" cy="14" r="2.2" fill="#B8862F"/>
+        <circle cx="236" cy="14" r="2.2" fill="#B8862F"/>
+        <circle cx="312" cy="14" r="3.5" fill="#B8862F"/>
+        <text x="4" y="92" font-family="'Fraunces',Georgia,serif" font-style="italic" font-weight="400" font-size="68" letter-spacing="-2" fill="#0E1726">shastra</text>
+      </svg>
+    </a>
+    <nav>
+      <a href="#services" class="desktop-only">Services</a>
+      <a href="#method" class="desktop-only">Method</a>
+      <a href="#founder" class="desktop-only">About</a>
+      <a href="#contact" class="cta">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-top: none;">
+  <div class="container">
+    <div class="eyebrow">AI technology company</div>
+    <h1>Modern brands, built and grown with <em>the smartest application of AI.</em></h1>
+    <p class="sub">Shastra AI is an AI technology company with offices in Bangalore and Kent, working with brands across India, the UAE, the UK and the US. We design, build and scale brands by combining strategy, craft and AI from day one — not as an afterthought.</p>
+    <a href="#contact" class="hero-cta">
+      Start a project
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="geo-strip">
+      <span><span class="dot"></span>India</span>
+      <span><span class="dot"></span>UAE</span>
+      <span><span class="dot"></span>UK</span>
+      <span><span class="dot"></span>USA</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow">What we do</div>
+    <h2 class="section-title">Four ways we help brands <em>compound.</em></h2>
+    <p class="section-lead">Each engagement starts with what the brand actually needs — not with a fixed deliverable. These are the disciplines we lead with.</p>
+
+    <div class="services">
+      <div class="service">
+        <div class="service-num">01</div>
+        <h3>AI Build</h3>
+        <p>Websites, apps, internal tools, automations and AI agents. We embed AI into the product surfaces and operational flows that matter most — from customer-facing copilots to back-of-house process redesign.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">02</div>
+        <h3>Creative &amp; Content</h3>
+        <p>Campaigns, content production, design systems, social. AI-assisted ideation and asset generation at scale, paired with senior creative direction so the output feels considered, not commoditised.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">03</div>
+        <h3>Performance Marketing</h3>
+        <p>Paid media across Meta, Google, LinkedIn, TikTok and emerging channels. AI-driven creative testing, audience modelling and budget allocation that finds your unit economics faster and scales them harder.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">04</div>
+        <h3>Brand &amp; Strategy</h3>
+        <p>Positioning, naming, identity systems, narrative. AI-augmented research and concept development that compresses months of strategic work into weeks — without losing the human judgment that makes brands distinctive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section id="audiences">
+  <div class="container">
+    <div class="section-eyebrow">Who we work with</div>
+    <h2 class="section-title">Brands ready to <em>move with intent.</em></h2>
+    <p class="section-lead">We work with founders, marketers and operators across stages and sectors — wherever AI changes what's possible. A few patterns of who we serve best:</p>
+
+    <div class="audiences">
+      <div class="audience">
+        <h4>Challenger brands</h4>
+        <p>Early-stage consumer and B2B brands building from scratch — typically founder-led, Series A to C, looking to compete with incumbents through speed and craft rather than budget.</p>
+      </div>
+      <div class="audience">
+        <h4>Established brands modernising</h4>
+        <p>Mid-market to enterprise teams whose existing marketing function predates the AI shift — and whose CMOs need to rebuild the operating model without disrupting the in-flight work.</p>
+      </div>
+      <div class="audience">
+        <h4>Operators with a thesis</h4>
+        <p>PE and growth-equity teams with a portfolio company that needs the brand, marketing or product surface re-tooled before the next round — fast, with senior people, on a fixed timeline.</p>
+      </div>
+      <div class="audience">
+        <h4>Cross-border launches</h4>
+        <p>Brands launching into India from the UAE/UK/US, or out of India into Western markets. We work fluently across both sides — culturally, operationally and from a media-buying standpoint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="method">
+  <div class="container">
+    <div class="section-eyebrow">The Shastra method</div>
+    <h2 class="section-title">A clear path from <em>signal to scale.</em></h2>
+    <p class="section-lead">Every engagement runs on the same three-part rhythm. It's how we keep work focused, measurable and worth the spend — regardless of the discipline we're leading with.</p>
+
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="step-eyebrow">01</div>
+        <h3>Understand</h3>
+        <p>Brand audit, audience research, competitive landscape, AI capability mapping. Two to three weeks of structured discovery so the work that follows is built on signal, not guesswork. Output: a strategy artefact your team can act on.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-eyebrow">02</div>
+        <h3>Build</h3>
+        <p>Strategy, creative, systems — executed with AI in the loop from the first sprint, not bolted on at the end. Senior people on the work, daily writes, weekly reviews. You see what we make as we make it.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-eyebrow">03</div>
+        <h3>Scale</h3>
+        <p>Measurement, optimisation, growth loops, hand-off. The point isn't a deck — it's a live system your team can run. We stay on as long as we're adding value, and we don't pretend otherwise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <div class="section-eyebrow">Founder</div>
+    <h2 class="section-title">Senior people, <em>on every brief.</em></h2>
+    <p class="section-lead">Shastra is led by senior practitioners. You'll work directly with the people making decisions about your brand — not handed off to a junior team after the pitch.</p>
+
+    <div class="founder">
+      <div class="founder-photo">SJ</div>
+      <div class="founder-text">
+        <h3>Sanket Joshi</h3>
+        <div class="role">Founder</div>
+        <p>Twenty years across brand, marketing and venture-building between India, the UAE and the UK. Previously built and operated companies in consumer, manufacturing and digital — most recently MPS, a battery and energy systems business serving telecoms and infrastructure.</p>
+        <p>Started Shastra to bring the rigour of operator-built businesses to the creative and AI work brands are now asking for. AI doesn't change what makes a brand work. It changes how fast you can find out.</p>
+        <p><a href="https://linkedin.com/in/sanketjoshi" target="_blank" rel="noopener">LinkedIn →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-eyebrow">Work with us</div>
+    <h2>Tell us about <em>the brand you're building.</em></h2>
+    <p>A short note about the brand, the work, and the timeline is enough to start. We'll come back within two working days with whether we're the right fit — and an honest take either way.</p>
+    <a href="mailto:hello@shastra.io?subject=Project%20enquiry" class="contact-cta">
+      hello@shastra.io
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <p style="margin-top:14px;"><a href="https://cal.com/shastra/discovery" class="contact-cta" style="font-size:0.9em;">
+      or book a 30-minute discovery call
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></p>
+
+    <div class="offices">
+      <div class="office">
+        <div class="office-label">India Office</div>
+        <div class="office-name">Shastra AI · Bangalore</div>
+        <p class="office-address">Maharaja Signal, 641 2nd floor, 4th block, Pushpanjali Building, 80 Feet Rd, Koramangala, Bengaluru, Karnataka 560034</p>
+        <a class="office-phone" href="tel:+918879045453">+91 88790 45453</a>
+      </div>
+      <div class="office">
+        <div class="office-label">UK Office</div>
+        <div class="office-name">Shastra AI · Kent</div>
+        <p class="office-address">136 Keatning Close, Rochester, Kent ME1 1JX, United Kingdom</p>
+        <a class="office-phone" href="tel:+447482881894">+44 7482 881894</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© Shastra AI. A unit of Hridtech Private Limited.</div>
+    <div class="foot-links">
+      <a href="mailto:hello@shastra.io">hello@shastra.io</a>
+      <a href="https://linkedin.com/in/sanketjoshi" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
