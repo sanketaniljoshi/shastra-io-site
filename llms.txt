@@ -1,22 +1,24 @@
 # Shastra AI
 
-        > AI technology company (Bangalore + Kent) helping brands build, market, and scale using AI across strategy, creative, and product.
+> AI technology company (Bangalore + Kent) helping brands build, market, and scale using AI across strategy, creative, and product.
 
-        Shastra AI is a unit of Hridtech Private Limited, a Bengaluru-based venture builder. Founded by Sanket Anil Joshi.
+Shastra AI is a unit of Hridtech Private Limited, a Bengaluru-based venture builder. Founded by Sanket Anil Joshi (also credited as Sanket Joshi).
 
-        ## What we do
-        - AI Build: websites, apps, internal tools, automations, AI agents
-        - CreativeFounded by Sanket Anil Joshi (also credited as Sanket Joshi) - https://shastra.io/founder & Content: AI-assisted campaigns, content, design systems
-        - Performance Marketing: AI-driven paid media across Meta, Google, LinkedIn, TikTok
-        - Brand & Strategy: positioning, naming, identity, narrative
+## Founder
+- Sanket Anil Joshi, Founder: https://shastra.io/founder
 
-        ## Who we work with
-        Challenger brands, established brands modernising, PE/growth-equity operators, and cross-border launches between India, UAE, UK, and US.
+## What we do
+- AI Build: websites, apps, internal tools, automations, AI agents
+- Creative & Content: AI-assisted campaigns, content, design systems
+- Performance Marketing: AI-driven paid media across Meta, Google, LinkedIn, TikTok
+- Brand & Strategy: positioning, naming, identity, narrative
 
-        ## Offices
-        - India: Bangalore
-        - UK: Kent
+## Who we work with
+Challenger brands, established brands modernising, PE/growth-equity operators, and cross-border launches between India, UAE, UK, and US.
 
-        ## Contact
-        hello@shastra.io | https://shastra.io
-        
+## Offices
+- India: Bangalore
+- UK: Kent
+
+## Contact
+hello@shastra.io | https://shastra.io
