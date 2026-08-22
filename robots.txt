@@ -1,4 +1,39 @@
+# Crawler policy — set 23 Aug 2026.
+#
+# IMPORTANT: Cloudflare INJECTS a managed block into this file at serve time.
+# That injected block already disallows the training crawlers this policy
+# wants blocked (GPTBot, ClaudeBot, CCBot, Bytespider, Amazonbot,
+# meta-externalagent) — so they are deliberately NOT repeated here. Declaring
+# them twice would produce duplicate groups for one user-agent.
+#
+# The injected block ALSO disallows Google-Extended and Applebot-Extended.
+# The other four sites allow Google-Extended; this one cannot, because the
+# managed block cannot be overridden from the asset file and the Cloudflare
+# zone setting is not reachable with the current API token. To align shastra
+# with the rest of the portfolio, turn off Cloudflare's managed AI-bot
+# robots.txt in the dashboard, then add a Google-Extended Allow group here.
+#
+# What this file adds: explicit allows for AI SEARCH crawlers, which Cloudflare
+# does not block and which would otherwise only inherit the wildcard. These are
+# the crawlers that produce cited, attributed answers.
+
 User-agent: *
+Allow: /
+
+# --- AI search / user-directed retrieval: allowed ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://shastra.io/sitemap.xml
