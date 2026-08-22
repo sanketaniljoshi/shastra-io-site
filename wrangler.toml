@@ -1,5 +1,10 @@
 name = "shastra-site"
 compatibility_date = "2026-08-06"
+main = "worker.js"
 
 [assets]
 directory = "."
+binding = "ASSETS"
+# Assets are served before the Worker by default, which stops the www->apex
+# redirect in worker.js from ever running. Verified 22 Aug 2026.
+run_worker_first = true
