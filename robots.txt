@@ -1,23 +1,25 @@
-# Crawler policy — set 23 Aug 2026.
+# Crawler policy — set 23 Aug 2026, made self-sufficient 3 Sep 2026.
 #
-# IMPORTANT: Cloudflare INJECTS a managed block into this file at serve time.
-# That injected block already disallows the training crawlers this policy
-# wants blocked (GPTBot, ClaudeBot, CCBot, Bytespider, Amazonbot,
-# meta-externalagent) — so they are deliberately NOT repeated here. Declaring
-# them twice would produce duplicate groups for one user-agent.
+# This file now states the WHOLE policy on its own. It previously relied on
+# Cloudflare's managed robots.txt block, which is injected at the zone edge and
+# already disallowed the training crawlers, so they were deliberately not
+# repeated here. That was fragile: switching the managed block off would have
+# silently allowed every training crawler. Everything is declared explicitly
+# below, so the policy is identical whether or not Cloudflare injects anything.
 #
-# The injected block ALSO disallows Google-Extended and Applebot-Extended.
-# The other four sites allow Google-Extended; this one cannot, because the
-# managed block cannot be overridden from the asset file and the Cloudflare
-# zone setting is not reachable with the current API token. To align shastra
-# with the rest of the portfolio, turn off Cloudflare's managed AI-bot
-# robots.txt in the dashboard, then add a Google-Extended Allow group here.
+# AI SEARCH crawlers are allowed: they produce cited, attributed answers that
+# link back here. MODEL TRAINING crawlers are not permitted: that use is
+# unattributed, sends no traffic, and cannot be undone once it has happened.
+# Providers document the two separately, so this distinction is enforceable.
 #
-# What this file adds: explicit allows for AI SEARCH crawlers, which Cloudflare
-# does not block and which would otherwise only inherit the wildcard. These are
-# the crawlers that produce cited, attributed answers.
+# Google-Extended is ALLOWED here, matching cour.pro, skilyo.com, hridtech.com,
+# mpsaerospace.com and kkoob.com. Cloudflare's managed block disallows it and
+# cannot be overridden from this file; turn the managed robots.txt setting off
+# in the Cloudflare dashboard (Security → Settings → Bot traffic) for this
+# line to take effect.
 
 User-agent: *
+Content-Signal: search=yes,ai-train=no,use=reference
 Allow: /
 
 # --- AI search / user-directed retrieval: allowed ---
@@ -35,5 +37,30 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- Model training: not permitted ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
 
 Sitemap: https://shastra.io/sitemap.xml
