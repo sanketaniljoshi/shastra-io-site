@@ -13,10 +13,11 @@
 # Providers document the two separately, so this distinction is enforceable.
 #
 # Google-Extended is ALLOWED here, matching cour.pro, skilyo.com, hridtech.com,
-# mpsaerospace.com and kkoob.com. Cloudflare's managed block disallows it and
-# cannot be overridden from this file; turn the managed robots.txt setting off
-# in the Cloudflare dashboard (Security → Settings → Bot traffic) for this
-# line to take effect.
+# mpsaerospace.com and kkoob.com. Cloudflare's managed robots.txt setting used to
+# inject a Disallow for it that could not be overridden from this file; that
+# setting was turned off in the dashboard on 3 Sep 2026 (Security > Settings >
+# Bot traffic), so this file is now the only thing served. Do NOT turn it back
+# on: it would re-block Google-Extended and duplicate every group below.
 
 User-agent: *
 Content-Signal: search=yes,ai-train=no,use=reference
