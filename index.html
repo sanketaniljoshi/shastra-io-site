@@ -577,7 +577,20 @@ gtag('config', 'G-9FBV0XBDJR');
     transition: color 0.2s;
   }
   footer a:hover { color: var(--amber); }
-  footer .foot-links { display: flex; gap: 24px; }
+  footer .foot-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px 24px;
+  }
+  @media (max-width: 720px) {
+    footer .container { align-items: flex-start; }
+    footer .foot-links {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 12px 20px;
+    }
+  }
 </style>
 </head>
 <body>
