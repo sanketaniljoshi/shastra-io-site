@@ -95,6 +95,16 @@ gtag('config', 'G-9FBV0XBDJR');
   .result .score { font-family:'Fraunces',Georgia,serif; font-size:68px; line-height:1; color:var(--amber); margin:12px 0 20px; }
   .result p { color:rgba(247,243,234,.72); }
   .result .button { background:var(--amber); color:var(--ink); border-color:var(--amber); align-self:flex-start; }
+  .intent-capture { background:#EEE7D8; }
+  .intent-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:46px; align-items:start; }
+  .intent-proof { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .intent-card { background:var(--ink); color:var(--cream); border-radius:6px; padding:34px; }
+  .intent-card h3 { color:var(--cream); }
+  .intent-card ol { padding-left:22px; color:rgba(247,243,234,.78); }
+  .intent-card li + li { margin-top:9px; }
+  .intent-card .micro { color:rgba(247,243,234,.66); }
+  .intent-card .button { background:var(--amber); border-color:var(--amber); color:var(--ink); }
+  .intent-card .button.secondary { background:transparent; border-color:rgba(247,243,234,.5); color:var(--cream); }
   .deliverables { background:var(--ink); color:var(--cream); }
   .deliverables .section-lead,.deliverables .card p { color:rgba(247,243,234,.72); }
   .deliverables .card { background:rgba(247,243,234,.04); border-color:rgba(184,134,47,.35); }
@@ -128,7 +138,7 @@ gtag('config', 'G-9FBV0XBDJR');
   .foot-links { display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end; }
   footer a { color:inherit; }
   @media (max-width:800px) {
-    .hero-grid,.checker-wrap,.commercial,.agency-grid { grid-template-columns:1fr; }
+    .hero-grid,.checker-wrap,.commercial,.agency-grid,.intent-grid { grid-template-columns:1fr; }
     .states,.timeline { grid-template-columns:repeat(2,1fr); }
     .state:nth-child(2) { border-right:0; }
     .state:nth-child(-n+2) { border-bottom:1px solid var(--light-grey); }
@@ -203,6 +213,30 @@ gtag('config', 'G-9FBV0XBDJR');
           <div class="actions"><button class="button" id="calculate" type="button">Calculate readiness</button><button class="button secondary" id="clear" type="button">Clear</button></div>
         </div>
         <aside class="result" aria-live="polite"><div class="eyebrow">Indicative local check</div><div class="score" id="score">0/7</div><h3 id="verdict">Check the gates to begin.</h3><p id="result-copy">The sprint tests all seven with evidence before Shastra recommends a launch.</p><div class="actions"><a class="button" href="https://cal.com/shastra/discovery">Book a 30-minute fit call</a></div></aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="intent-capture" id="request-readiness">
+    <div class="container intent-grid">
+      <div>
+        <div class="eyebrow">See the decision before you buy</div>
+        <h2>Have one advertiser, offer and <em>market in mind?</em></h2>
+        <p class="section-lead" style="margin-bottom:0">Start with five facts. We will tell you whether a readiness conversation is appropriate before you share account evidence or commit to a sprint.</p>
+        <div class="intent-proof"><a class="button secondary" href="/assets/shastra-chatgpt-ads-readiness-sample.pdf" target="_blank" rel="noopener">View a synthetic sample decision</a></div>
+        <p class="micro">The sample is fictional and clearly labelled. It demonstrates the decision format, not client results, platform access or campaign performance.</p>
+      </div>
+      <div class="intent-card">
+        <h3>Email these five facts</h3>
+        <ol>
+          <li>Company website</li>
+          <li>Country or market</li>
+          <li>One product or offer</li>
+          <li>Whether an eligible client-owned Ads Manager account is visible</li>
+          <li>Who owns landing-page and measurement changes</li>
+        </ol>
+        <p class="micro">Do not send passwords, payment details, customer data, account exports or private ChatGPT conversations. The first conversation requires no account access.</p>
+        <div class="actions"><a class="button" href="mailto:hello@shastra.io?subject=ChatGPT%20Ads%20readiness%20question&amp;body=Company%20website%3A%0AMarket%3A%0AOne%20offer%3A%0AEligible%20client-owned%20Ads%20Manager%20visible%20(yes%2Fno%2Funknown)%3A%0ALanding%20and%20measurement%20owner%3A%0A%0ADo%20not%20include%20passwords%2C%20payment%20details%2C%20customer%20data%2C%20account%20exports%20or%20private%20ChatGPT%20conversations.">Email the five facts</a><a class="button secondary" href="https://cal.com/shastra/discovery">Book a 30-minute fit call</a></div>
       </div>
     </div>
   </section>
