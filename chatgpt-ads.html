@@ -212,7 +212,7 @@ gtag('config', 'G-9FBV0XBDJR');
           <label class="choice"><input type="checkbox" data-gate><span>Measurement can record the intended outcome</span></label>
           <div class="actions"><button class="button" id="calculate" type="button">Calculate readiness</button><button class="button secondary" id="clear" type="button">Clear</button></div>
         </div>
-        <aside class="result" aria-live="polite"><div class="eyebrow">Indicative local check</div><div class="score" id="score">0/7</div><h3 id="verdict">Check the gates to begin.</h3><p id="result-copy">The sprint tests all seven with evidence before Shastra recommends a launch.</p><div class="actions"><a class="button" href="https://cal.com/shastra/discovery">Book a 30-minute fit call</a></div></aside>
+        <aside class="result" aria-live="polite"><div class="eyebrow">Indicative local check</div><div class="score" id="score">0/7</div><h3 id="verdict">Check the gates to begin.</h3><p id="result-copy">The sprint tests all seven with evidence before Shastra recommends a launch.</p><div class="actions"><a class="button" href="https://cal.com/shastra/discovery">Book a 30-minute fit call</a><a class="button secondary" id="email-readiness" href="mailto:hello@shastra.io?subject=ChatGPT%20Ads%20readiness%20check">Email this check</a></div></aside>
       </div>
     </div>
   </section>
@@ -281,11 +281,58 @@ gtag('config', 'G-9FBV0XBDJR');
 <footer><div class="container"><div>© Shastra AI. A unit of <a href="https://hridtech.com" rel="noopener">Hridtech Private Limited</a>.</div><div class="foot-links"><a href="/">Home</a><a href="/founder">Founder</a><a href="/privacy">Privacy</a><a href="mailto:hello@shastra.io">hello@shastra.io</a></div></div></footer>
 
 <script>
-  const gates=[...document.querySelectorAll('[data-gate]')],score=document.getElementById('score'),verdict=document.getElementById('verdict'),copy=document.getElementById('result-copy');
-  function calculate(){const n=gates.filter(g=>g.checked).length;score.textContent=`${n}/7`;if(n===7){verdict.textContent='Ready for an evidence review';copy.textContent='All seven local gates are checked. The paid sprint must still verify the evidence before any launch proposal.'}else if(n>=5){verdict.textContent='Likely conditional — close the missing gates first';copy.textContent=`${7-n} gate${7-n===1?'':'s'} still need attention. The sprint will identify whether they are resolvable before a pilot.`}else{verdict.textContent='Wait — a pilot is premature';copy.textContent=`${7-n} gate${7-n===1?'':'s'} remain. The sprint can still diagnose the gaps, but do not commit media or an activation date yet.`}}
-  document.getElementById('calculate').addEventListener('click',calculate);
-  document.getElementById('clear').addEventListener('click',()=>{gates.forEach(g=>g.checked=false);calculate()});
-  gates.forEach(g=>g.addEventListener('change',calculate));
+  const gates = [...document.querySelectorAll('[data-gate]')];
+  const score = document.getElementById('score');
+  const verdict = document.getElementById('verdict');
+  const copy = document.getElementById('result-copy');
+  const emailReadiness = document.getElementById('email-readiness');
+
+  function updateReadinessEmail() {
+    const lines = gates.map((gate, index) => {
+      const label = gate.closest('label').textContent.trim();
+      return `${index + 1}. ${gate.checked ? 'Checked' : 'Unchecked'}: ${label}`;
+    });
+    const body = [
+      'I would like to discuss this self-reported readiness check.',
+      '',
+      ...lines,
+      '',
+      'These selections require an evidence review and do not establish platform eligibility or approval.',
+      '',
+      'Company website:',
+      'Country or market:',
+      'One product or offer:',
+      'Landing-page and measurement owner:',
+      '',
+      'Do not include passwords, payment details, customer data, account exports or private ChatGPT conversations.'
+    ].join('\n');
+    emailReadiness.href = 'mailto:hello@shastra.io?subject=' +
+      encodeURIComponent('ChatGPT Ads readiness check') + '&body=' + encodeURIComponent(body);
+  }
+
+  function calculate() {
+    const n = gates.filter(gate => gate.checked).length;
+    score.textContent = `${n}/7`;
+    if (n === 7) {
+      verdict.textContent = 'Ready for an evidence review';
+      copy.textContent = 'All seven local gates are checked. The paid sprint must still verify the evidence before any launch proposal.';
+    } else if (n >= 5) {
+      verdict.textContent = 'Likely conditional — close the missing gates first';
+      copy.textContent = `${7 - n} gate${7 - n === 1 ? '' : 's'} still need attention. The sprint will identify whether they are resolvable before a pilot.`;
+    } else {
+      verdict.textContent = 'Wait — a pilot is premature';
+      copy.textContent = `${7 - n} gate${7 - n === 1 ? '' : 's'} remain. The sprint can still diagnose the gaps, but do not commit media or an activation date yet.`;
+    }
+    updateReadinessEmail();
+  }
+
+  document.getElementById('calculate').addEventListener('click', calculate);
+  document.getElementById('clear').addEventListener('click', () => {
+    gates.forEach(gate => { gate.checked = false; });
+    calculate();
+  });
+  gates.forEach(gate => gate.addEventListener('change', calculate));
+  updateReadinessEmail();
 </script>
 </body>
 </html>
